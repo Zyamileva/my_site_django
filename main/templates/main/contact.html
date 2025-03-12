@@ -1,0 +1,11 @@
+{% extends "main/base.html" %}
+{% block content %}
+<h1>Контакти</h1>
+{% if has_contacts %}
+    <p><strong>Адреса:</strong> {{ address|default:"Немає даних" }}</p>
+    <p><strong>Телефон:</strong> {{ phone|default:"Немає даних" }}</p>
+    <p><strong>Email:</strong> {{ email|default:"Немає даних" }}</p>
+{% else %}
+    <p>Контактні дані відсутні.</p>
+{% endif %}
+{% endblock %}

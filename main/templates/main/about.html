@@ -1,0 +1,7 @@
+{% extends "main/base.html" %}
+{% block content %}
+<h1>Про нас</h1>
+<p>{{ description|truncatechars:120 }}</p>
+<p>{{ mission|upper }}</p>
+<p><small>Останнє оновлення: {{ last_updated|date:"d M Y" }}</small></p>
+{% endblock %}
